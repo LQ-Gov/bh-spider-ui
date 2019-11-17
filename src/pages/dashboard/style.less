@@ -1,0 +1,88 @@
+@import '~antd/lib/style/themes/default.less';
+@import '~@/utils/utils.less';
+
+
+.dashboardCard{
+  min-height: 182px;
+}
+
+.trendText {
+  margin-left: 8px;
+  color: @heading-color;
+}
+
+.salesCard {
+  .salesBar {
+    padding: 0 0 32px 32px;
+  }
+  .salesRank {
+    padding: 0 32px 32px 72px;
+  }
+  :global {
+    .ant-tabs-bar {
+      padding-left: 16px;
+      .ant-tabs-nav .ant-tabs-tab {
+        padding-top: 16px;
+        padding-bottom: 14px;
+        line-height: 24px;
+      }
+    }
+    .ant-tabs-extra-content {
+      padding-right: 24px;
+      line-height: 55px;
+    }
+    .ant-card-head {
+      position: relative;
+    }
+    .ant-card-head-title {
+      align-items: normal;
+    }
+  }
+}
+
+.salesExtra {
+  display: inline-block;
+  margin-right: 24px;
+  a {
+    margin-left: 24px;
+    color: @text-color;
+    &:hover {
+      color: @primary-color;
+    }
+    &.currentDate {
+      color: @primary-color;
+    }
+  }
+}
+
+.salesCardExtra {
+  height: inherit;
+}
+
+@media screen and (max-width: @screen-lg) {
+  .salesExtra {
+    display: none;
+  }
+
+  .rankingList {
+    li {
+      span:first-child {
+        margin-right: 8px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: @screen-sm) {
+  .salesExtraWrap {
+    display: none;
+  }
+
+  .salesCard {
+    :global {
+      .ant-tabs-content {
+        padding-top: 30px;
+      }
+    }
+  }
+}
